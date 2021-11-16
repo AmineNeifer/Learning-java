@@ -19,15 +19,21 @@ public class exDoublyLinkedList {
         System.out.println(list.getSize());
 
         Employee billEnd = new Employee("Bill", "End", 78);
-        list.addToEnd(billEnd);
-        list.printList();
-        System.out.println(list.getSize());
+//        list.addToEnd(billEnd);
+//        list.printList();
+//        System.out.println(list.getSize());
+//
+//        list.removeFromFront();
+//        list.printList();
+//        System.out.println(list.getSize());
+//
+//        list.removeFromEnd();
+//        list.printList();
+//        System.out.println(list.getSize());
 
-        list.removeFromFront();
-        list.printList();
-        System.out.println(list.getSize());
 
-        list.removeFromEnd();
+        list.addBefore(billEnd, johnDoe);
+        list.addBefore(new Employee("Someone", "Else", 1111), mikeWilson);
         list.printList();
         System.out.println(list.getSize());
     }
