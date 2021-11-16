@@ -23,5 +23,12 @@ public class exDoublyLinkedList {
         list.printList();
         System.out.println(list.getSize());
 
+        list.removeFromFront();
+        list.printList();
+        System.out.println(list.getSize());
+
+        list.removeFromEnd();
+        list.printList();
+        System.out.println(list.getSize());
     }
 }

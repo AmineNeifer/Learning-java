@@ -9,11 +9,11 @@ public class EmployeeDoublyLinkedList {
 
     public void addToFront(Employee employee) {
         EmployeeNode node = new EmployeeNode(employee);
-        node.setNext(head);
         if (head == null) {
             tail = node;
         } else {
             head.setPrev(node);
+            node.setNext(head);
         }
         head = node;
         size++;
@@ -31,15 +31,35 @@ public class EmployeeDoublyLinkedList {
         size++;
     }
 
+    public EmployeeNode removeFromEnd() {
+        if (isEmpty()) {
+            return null;
+        }
+        EmployeeNode removedNode = tail;
+        if (tail.getPrev() == null) {
+            head = null;
+        } else {
+            tail.getPrev().setNext(null);
+        }
+        tail = tail.getPrev();
+        size--;
+        removedNode.setPrev(null);
+        return removedNode;
+    }
 
     public EmployeeNode removeFromFront() {
         if (isEmpty()) {
             return null;
         }
         EmployeeNode removedNode = head;
+        if (head.getNext() == null) {
+            tail = null;
+        } else {
+            head.getNext().setPrev(null);
+        }
+
         head = head.getNext();
         size--;
-        head.setPrev(null);
         removedNode.setNext(null);
         return removedNode;
     }
