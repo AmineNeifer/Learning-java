@@ -32,7 +32,7 @@ public class exDoublyLinkedList {
 //        System.out.println(list.getSize());
 
 
-        list.addBefore(billEnd, johnDoe);
+        list.addBefore(billEnd, mikeWilson);
         list.addBefore(new Employee("Someone", "Else", 1111), mikeWilson);
         list.printList();
         System.out.println(list.getSize());
