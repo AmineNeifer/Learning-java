@@ -12,7 +12,7 @@ public class Main {
         Integer q2 = question2();
 //        System.out.println(q2);
 
-        
+
     }
     private static Integer question1(String[] args) {
         int sum = 0;
